@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruang Bangun Persegi</title>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+  <h1>Ruang Bangun Persegi</h1>
+
+  <div class="tengah">
+    
+    <div class="card">
+      <h1>Ruang Bangun Persegi</h1>
+      <div class="cardbody">
+
+        <form>
+          <label>Nilai Panjang</label>     
+            <input type="text" id="PJ">
+          <label>Nilai Lebar</label>
+            <input type="text" id="LB">
+        </form>
+
+        <div class="hsl" id="hasil">Hasil</div>
+
+      </div>
+      <div class="cardfooter">
+        <button class="btn1" onclick="hitung()">Hitung</button>
+      </div>
+    </div>
+  </div>
+
+  <br>
+    <script>
+  function hitung(){
+      var pj = document.getElementById("PJ").value;
+      var lb = document.getElementById("LB").value;
+      var luas = pj*lb
+      var res = "Hitung Luas Persegi<br>Nilai Panjang "+pj+", dan lebarnya "+lb+" menjadi: <br> Luas = Panjang x Lebar<br>Luas = "+pj+" x "+lb+"<br>Luas = "+luas 
+      var kll = 2*(pj+lb)
+      res += "<br> <br>Keliling Persegi<br>Keliling = 2 x (Panjang+Lebar)" 
+      res += "<br>Keliling = 2 x (" +pj+ "+"+ lb+ ")"
+      var pjlb = pj+lb
+      res += "<br>Keliling = 2 x "+pjlb
+      res += "<br>Keliling = "+kll
+
+      document.getElementById("hasil").innerHTML=res
+      //console.log(res)
+    }
+  </script>
+
+</body>
+</html>
